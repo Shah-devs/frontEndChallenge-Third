@@ -1,0 +1,246 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Dividers */
+    --light-grayish-blue: hsl(240, 5%, 91%);
+    --dividers: var(--light-grayish-blue);
+
+    /* #### Text colors*/
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+
+    --text-inactive-question: var(--very-dark-grayish-blue);
+    --text-answer: var(--dark-grayish-blue);
+    --text-active-question: var(--very-dark-desaturated-blue);
+    --text-hover: var(--soft-red);
+
+
+    /* Background gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --bg-gradient-violet: var(--soft-violet);
+    --bg-gradient-blue: var(--soft-blue);
+
+    /* bg images */
+    --bg-pattern-desktop: url("./images/bg-pattern-desktop.svg");
+    --bg-pattern-mobile: url("./images/bg-pattern-mobile.svg");
+    --bg-box-desktop: url("./images/illustration-box-desktop.svg");
+    --bg-women-desktop: url("./images/illustration-woman-online-desktop.svg");
+    --bg-women-mobile: url("./images/illustration-woman-online-mobile.svg");
+
+    --text-font: 'Kumbh Sans', sans-serif;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: no-repeat linear-gradient(var(--bg-gradient-violet), var(--bg-gradient-blue));
+    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--text-font);
+}
+
+.box {
+    display: block;
+    position: fixed;
+    transform: translate(-34vw, 3vw);
+    transition: transform 1s ease-out;
+    z-index: 1;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 67vw;
+    height: calc(100% - 20vh);
+    border-radius: 30px;
+    background-color: hsl(0, 0%, 100%);
+    overflow: hidden;
+}
+
+.left {
+    width: 80%;
+    padding-top: 20vw;
+    background: var(--bg-pattern-desktop) bottom right repeat;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+#illustration {
+    position: relative;
+    object-position: -5.5vw -5vw;
+    overflow: visible;
+}
+
+
+.right {
+    width: 40vw;
+    padding: 0px 8vw;
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 25px;
+    color: var(--text-active-question);
+    font-weight: 700;
+}
+
+hr {
+    border: 1px solid var(--dividers);
+}
+
+.content:hover {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
+.question {
+    display: flex;
+    width: 110%;
+}
+
+.question p {
+    flex: 1;
+    font-size: 1.2em;
+    padding: 1rem 0;
+    color: var(--text-inactive-question);
+}
+
+.question :hover {
+    color: var(--soft-red);
+}
+
+.active p {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--text-active-question);
+}
+
+.btn {
+    display: block;
+    object-fit: contain;
+}
+
+.answers {
+    max-height: 0;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: var(--text-answer);
+    font-weight: 400;
+}
+
+.answers-show {
+    max-height: 150px;
+    padding: 3vh 0;
+    font-size: 1.1em;
+    color: var(--text-answer);
+    font-weight: 400;
+    transition: max-height 1s ease-out;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.mobile-bg {
+    display: none;
+}
+
+.illus-mobile {
+    display: none;
+
+}
+
+.attribution {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 520px) {
+    .container {
+        padding: 0;
+    }
+
+    .right {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 50px;
+    }
+
+}
+
+@media (max-width: 450px)  {
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 150%;
+        height: 70%;
+        padding: 0 3rem;
+        padding-left: 0;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        padding: 0 0;
+    }
+
+    .mobile-bg {
+        display: block;
+        position: fixed;
+        object-position: -30vw -75vw;
+        overflow: visible;
+    }
+
+    .illus-mobile {
+        display: flex;
+        width: 70vw;
+        position: fixed;
+        object-position: 0 -83vw;
+        overflow: visible;
+    }
+
+
+    .box {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+    }
+
+}
