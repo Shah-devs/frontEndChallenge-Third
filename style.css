@@ -179,20 +179,7 @@ footer {
 }
 
 
-@media (max-width: 520px) {
-    .container {
-        padding: 0;
-    }
-
-    .right {
-        padding-right: 0;
-        padding-left: 0;
-        margin-left: 50px;
-    }
-
-}
-
-@media (max-width: 450px)  {
+@media (max-width: 768px)  {
     body {
         height: 100vh;
     }
