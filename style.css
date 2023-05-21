@@ -63,9 +63,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 67vw;
+    width: 67vw;
     height: calc(100% - 20vh);
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: hsl(0, 0%, 100%);
     overflow: hidden;
 }
@@ -73,7 +73,7 @@ body {
 .left {
     width: 80%;
     padding-top: 20vw;
-    background: var(--bg-pattern-desktop) bottom right repeat;
+    background: var(--bg-women-desktop) top 40% right 0% no-repeat,var(--bg-pattern-desktop) bottom right no-repeat;
     height: 100%;
     overflow: hidden;
 
@@ -91,6 +91,10 @@ body {
     padding: 0px 8vw;
     font-size: 0.7rem;
     line-height: 1rem;
+}
+
+.heading {
+    display: flex;
 }
 
 h1 {
@@ -135,6 +139,7 @@ hr {
 .btn {
     display: block;
     object-fit: contain;
+    transition: rotate 0.5s linear;
 }
 
 .answers {
@@ -164,10 +169,7 @@ footer {
     display: none;
 }
 
-.illus-mobile {
-    display: none;
 
-}
 
 .attribution {
     font-size: 0.7rem;
@@ -179,21 +181,48 @@ footer {
 }
 
 
-@media (max-width: 768px)  {
+@media (max-width: 520px) {
+    .container {
+        padding: 10px;
+    }
+
+    .right {
+        padding-right: 0;
+        padding-left: 0;
+        margin-left: 50px;
+    }
+
+}
+
+@media (max-width: 768px) {
     body {
-        height: 100vh;
+        min-height: 140vh;
     }
 
     .container {
         flex-direction: column;
-        width: 150%;
+        width: 70vw;
         height: 70%;
-        padding: 0 3rem;
-        padding-left: 0;
+        padding: 2em;
+        background-image: url("./images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: center 1%;
+        background-size: 65%;
+        justify-content: center;
+        align-items: center;
+
     }
 
     h1 {
+        width: 50vw;
         text-align: center;
+        position: unset;
+        padding: 10px;
+        margin-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
     }
 
     .left {
@@ -201,22 +230,41 @@ footer {
     }
 
     .right {
+        /* justify-content: center;
+        align-items:center; */
         padding: 0 0;
+        width: 90%;
+        height: 50%;
     }
 
-    .mobile-bg {
+
+    .illustration-mobile {
         display: block;
-        position: fixed;
-        object-position: -30vw -75vw;
-        overflow: visible;
+        position: absolute;
+        top: -10%;
+        width: 61vw;
+        height: 49vh;
+        background-image: url(./images/illustration-woman-online-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+
     }
 
-    .illus-mobile {
+    .question {
         display: flex;
-        width: 70vw;
-        position: fixed;
-        object-position: 0 -83vw;
-        overflow: visible;
+        padding-top: 1em;
+        width: fit-content;
+    }
+
+    .question p {
+        flex: 1;
+        font-size: 1.2em;
+        padding: 1rem 0;
+        color: var(--text-inactive-question);
+    }
+
+    .btn {
+        padding: 1rem;
     }
 
 
@@ -225,9 +273,7 @@ footer {
     }
 
     footer {
-        width: 100%;
-        position: absolute;
-        bottom: 5px;
+        display: none;
     }
 
 }
