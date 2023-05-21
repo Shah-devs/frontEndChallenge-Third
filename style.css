@@ -238,7 +238,7 @@ footer {
     .question {
         display: flex;
         padding-top: 1em;
-        width: fit-content;
+        width: 100%;
     }
 
     .question p {
