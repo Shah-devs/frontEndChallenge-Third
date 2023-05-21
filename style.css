@@ -181,18 +181,6 @@ footer {
 }
 
 
-@media (max-width: 520px) {
-    .container {
-        padding: 10px;
-    }
-
-    .right {
-        padding-right: 0;
-        padding-left: 0;
-        margin-left: 50px;
-    }
-
-}
 
 @media (max-width: 768px) {
     body {
@@ -210,7 +198,6 @@ footer {
         background-size: 65%;
         justify-content: center;
         align-items: center;
-
     }
 
     h1 {
@@ -230,8 +217,6 @@ footer {
     }
 
     .right {
-        /* justify-content: center;
-        align-items:center; */
         padding: 0 0;
         width: 90%;
         height: 50%;
@@ -244,7 +229,7 @@ footer {
         top: -10%;
         width: 61vw;
         height: 49vh;
-        background-image: url(./images/illustration-woman-online-mobile.svg);
+        background-image: url("./images/illustration-woman-online-mobile.svg");
         background-repeat: no-repeat;
         background-position: center;
 
