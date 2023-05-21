@@ -73,7 +73,7 @@ body {
 .left {
     width: 80%;
     padding-top: 20vw;
-    background: var(--bg-women-desktop) top 40% right 0% no-repeat,var(--bg-pattern-desktop) bottom right no-repeat;
+    background: var(--bg-women-desktop) top 50% right 0% no-repeat,var(--bg-pattern-desktop) bottom right no-repeat;
     height: 100%;
     overflow: hidden;
 
